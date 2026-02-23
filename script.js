@@ -69,7 +69,7 @@ async function loadBlinkRecord() {
   const snapshot = await get(ref(db, "highscore"));
   console.log(snapshot.val());
   if (snapshot.exists()) {
-    blinkRecord = snapshot.val();
+    blinkRecord = Number(snapshot.val()) || 0;
     blinkRecordElement.innerText = snapshot.val();
   }
 }
