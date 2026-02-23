@@ -74,12 +74,10 @@ async function loadBlinkRecord() {
   }
 }
 
-loadBlinkRecord();
+await loadBlinkRecord();
 
 // ===== Save new record to Firebase =====
 async function saveBlinkRecord(currentScore) {
-  set(ref(db, "highscore"), blinkRecord);
-  blinkRecordElement.innerText = blinkRecord;
   if (currentScore > blinkRecord) {
     blinkRecord = currentScore;
     await set(ref(db, "highscore"), blinkRecord);
@@ -87,7 +85,7 @@ async function saveBlinkRecord(currentScore) {
   }
 }
 
-saveBlinkRecord(5); 
+//await saveBlinkRecord(5); 
 
 // ===== Create FaceLandmarker model =====
 async function createFaceLandmarker() {
