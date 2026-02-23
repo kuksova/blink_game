@@ -6,7 +6,7 @@ const { FaceLandmarker, FilesetResolver, DrawingUtils } = vision;
 
 // ===== Firebase setup =====
 const firebaseConfig = {
-  
+  apiKey: "AIzaSyDT_g_xHGVT7ihkERaS-T-ar1IGeHxmsiw",
   authDomain: "blink-game-8031f.firebaseapp.com",
   databaseURL: "https://blink-game-8031f-default-rtdb.firebaseio.com",
   projectId: "blink-game-8031f",
