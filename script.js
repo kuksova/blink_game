@@ -85,6 +85,7 @@ async function saveBlinkRecord(currentScore) {
   }
 }
 
+saveBlinkRecord(5); 
 
 // ===== Create FaceLandmarker model =====
 async function createFaceLandmarker() {
