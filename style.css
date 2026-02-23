@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: system-ui;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+  display: flex;
+  flex-direction: column; /* сверху вниз */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.intro-text {
+  max-width: 520px;
+  margin: 0 auto 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #e0e0ff;
+  opacity: 0;                   /* initial invisibility */
+  transform: translateY(-20px); /* higher for a lifting effect */
+  animation: fadeInUp 1.2s forwards; /* appearance animation */
+}
+
+/* Smooth text appearance */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game-container {
+  width: 1020px;
+  /*width: min(1100px, 95vw);*/
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+/* statistics */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.camera-box,
+#output_canvas {
+  flex: 1;
+  min-width: 0;
+}
+
+/* video */
+.wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+video, canvas {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(45deg, #22d3ee, #a855f7);
+  transition: 0.25s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}

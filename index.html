@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blink Game</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="intro-text">
+  <p>Eye exercises: blink for 15 seconds — it’s good for your eyes.</p>
+  <p>Compete with others and see who blinks the most!</p>
+</div>
+
+<div class="game-container">
+
+  <h1>Blink Game 👁👁</h1>
+  
+
+  <div class="stats">
+    <div>Time left: <span id="timer">15</span>s</div>
+    <div>Blinks: <span id="blink-count">0</span></div>
+    <div>Global Record: <span id="blink-record">0</span></div>
+  </div>
+
+  <div class="buttons">
+    <button id="webcamButton">Enable Webcam</button>
+    <button id="start-game">Start Game</button>
+  </div>
+
+  <div class="wrapper">
+    <canvas id="output_canvas"></canvas>
+
+    <div class="camera-box">
+      <video id="webcam" autoplay muted playsinline></video>
+    </div>
+  </div>
+
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
